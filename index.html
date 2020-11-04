@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <style>body{ background-color: black;}</style>
+</head>
+<body>
+    <!-- <button onclick="alert('Hola') "> Saludame </button> -->
+    <h1 id="title"  style="color:;  ">HOLA, SOY UN TÍTULO QUE CAMBIARA SU COLOR</h1> 
+    <button onclick="colorChange()">Cambio random</button>
+    <button onclick="colorReverse()">Reverse</button>
+
+    <script>
+    let $title = document.getElementById('title')
+    let originalColor= $title.style.color = getRandomColor();
+    const colorChange = () => { 
+        $title.style.color= getRandomColor();
+    }
+
+    const colorReverse = () => {
+        
+        $title.style.color= originalColor;
+    }
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+    return color;
+
+    }
+
+
+
+
+        // const mesesDelAño = ['Enero', 'Febrero', 'Marzo', 'Abril', 
+        // 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 
+        // 'Noviembre', 'Diciembre'];
+        // const planetas = ['Mercurio', 'Venus', 'Tierra', 'Marte', 'Jupiter']
+        // let longitud = mesesDelAño.length;
+        // const filter = longitud == 13 
+        // ? document.write('¡TENEMOS LOS MESES COMPLETOS!')
+        // : document.write('¡Ooops! te faltó algun mes, amiguito')
+        // document.write('<br>')
+        // const listaDeMeses = mesesDelAño.join('<br>');
+        // mesesDelAño.pop(); borrar ultimo items
+        // mesesDelAño.push('hola'); agregar items al final
+        // mesesDelAño.shift(); borrar el primer item
+        // mesesDelAño.unshift('hola'); agregar item al inicio
+        // const planetasYMeses = mesesDelAño.concat(planetas) Une dos arrays
+        // mesesDelAño.sort(); Organizar alfabeticamente
+        // mesesDelAño.reverse(); invertir orden (solo letras)
+
+    </script>
+</body>
+</html>
