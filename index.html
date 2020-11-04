@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction</title>
-    <style>body{ background-color: black;}</style>
+    <style>body{ background-color: black; } #B:hover { background-color: gray }</style>
 </head>
 <body>
     <!-- <button onclick="alert('Hola') "> Saludame </button> -->
     <h1 id="title"  style="color:;  ">HOLA, SOY UN TÍTULO QUE CAMBIARA SU COLOR</h1> 
     <button onclick="colorChange()">Cambio random</button>
     <button onclick="colorReverse()">Reverse</button>
+    <br>
+    <br>
+    <button id="B" style="display: block; margin: auto; position: relative; top: 500px;
+    width: 100px; height: 50px; " onclick="activateText()">Solo para mi amorcito</button>
+    <h1 id="C" style="margin: 50px; text-align: center;  
+    font-size: 30px; color: white; display: none;">Te quiero mucho, eres preciosa, me encantas. Mejorate pronto!, 
+        Feliz cumpleaños, que niña tan hermosa, tan chiquita y tan increible
+    Te quiero, bye.</h1>
 
     <script>
     let $title = document.getElementById('title')
+    let $carla = document.getElementById('C');
     let originalColor= $title.style.color = getRandomColor();
     const colorChange = () => { 
         $title.style.color= getRandomColor();
@@ -31,6 +40,10 @@
         }
     return color;
 
+    }
+    
+    const activateText = () => {
+        $carla.style.display= 'block';
     }
 
 
